@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 6%;
+}
+
+.form_input {
+  width: 65%;
+  height: 90%;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 0 15px;
+}
+
+.form_button {
+  width: 20%;
+  height: 90%;
+  border: none;
+  border-radius: 10px;
+  background-color: #b0e6f7;
+  font-size: 20px;
+}

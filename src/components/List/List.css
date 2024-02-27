@@ -1,0 +1,27 @@
+.card {
+  width: 100%;
+  height: 80px;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.card_text {
+  width: 75%;
+  font-size: 20px;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.card_button {
+  width: 20%;
+  height: 60%;
+  border: none;
+  border-radius: 10px;
+  background-color: #fe9c9c;
+  font-size: 20px;
+}

@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Form from './components/Form/Form';
+import List from './components/List/List';
+import { RootState } from './store';
+import { useAppSelector } from './store/hooks';
 
 function App() {
+  const todos = useAppSelector((state: RootState) => state.todos);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="title">Todo List</header>
+      <main className="todo">
+        <Form />
+        <section className="todo_list">
+          <div className="todo_wrapper">
+            {todos.map(({ id, todo }) => <List key={id} id={id} todo={todo} />)}
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
